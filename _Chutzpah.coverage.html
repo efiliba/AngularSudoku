@@ -1,0 +1,193 @@
+
+<html>
+<head>
+    <title>Chutzpah Code Coverage Results</title>
+    <script type='text/javascript'>
+        
+function chutzpah_toggleSource(id) {
+        var element = document.getElementById(id);
+        if(element.style.display === 'block') {
+            element.style.display = 'none';
+        } else {
+            element.style.display = 'block';
+        }
+    }
+
+    </script>
+    <style>
+        
+#chutzpah-main
+{
+  background:#EEE;
+  clear:both;
+  color:#333;
+  font-family:'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Calibri, Helvetica, Arial, sans-serif;
+  font-size:17px;
+  margin:2px;
+}
+
+#chutzpah-main a
+{
+  color:#333;
+  text-decoration:none;
+}
+
+#chutzpah-main a:hover
+{
+  text-decoration:underline;
+}
+
+.chutzpah
+{
+  border-bottom:1px solid #FFF;
+  clear:both;
+  margin:0;
+  padding:5px;
+}
+
+.chutzpah-error
+{
+  color:red;
+}
+
+.chutzpah-success
+{
+  color:#5E7D00;
+}
+
+.chutzpah-file
+{
+  width:auto;
+}
+
+.chutzpah-cl
+{
+  float:left;
+}
+
+.chutzpah div.rs
+{
+  float:right;
+  margin-left:50px;
+  width:150px;
+}
+
+.chutzpah-nb
+{
+  padding-right:10px;
+}
+
+#chutzpah-main a.chutzpah-logo
+{
+  color:#3245FF;
+  cursor:pointer;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.chutzpah-source
+{
+  background-color:#FFF;
+  border:1px solid #CBCBCB;
+  color:#363636;
+  margin:25px 20px;
+  overflow-x:scroll;
+  width:80%;
+}
+
+.chutzpah-source div
+{
+  white-space:nowrap;
+}
+
+.chutzpah-source span
+{
+  background-color:#EAEAEA;
+  color:#949494;
+  display:inline-block;
+  padding:0 10px;
+  text-align:center;
+}
+
+.chutzpah-source .miss
+{
+  background-color:#e6c3c7;
+}
+
+    </style>
+</head>
+<body>
+<div id='chutzpah-main'>
+	<div class='chutzpah chutzpah-title'>
+		<div class='chutzpah-cl chutzpah-file'>
+			<a href='http://chutzpah.codeplex.com/' target='_blank' class='chutzpah-logo'>Chutzpah</a> code coverage via <a href='http://blanketjs.org' target='_blank' class='chutzpah-logo'>blanket.js</a> results
+		</div>
+		<div class='chutzpah-cl rs'>
+			Coverage (%)
+		</div>
+		<div class='chutzpah-cl rs'>
+			Covered/Total Smts.
+		</div>
+		<div style='clear:both;'>
+		</div>
+	</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>1.</span><a href='javascript:chutzpah_toggleSource("file-1")'>c:\angularjs\sudoku\sudoku\app\Utilities\Combinations.ts</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		100 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		36/36
+	</div>
+	<div id='file-1' class='chutzpah-source' style='display:none;'>
+		 <div class='hit'><span class=''>1</span>var Solver;</div> <div class='hit'><span class=''>2</span>(function (Solver) {</div> <div class='hit'><span class=''>3</span>    var Combinations = (function () {</div> <div class='hit'><span class=''>4</span>        function Combinations(maxItemsSelectFrom) {</div> <div class='hit'><span class=''>5</span>            var setBits = this.createSetBitsLookup(maxItemsSelectFrom);</div> <div class=''><span class=''>6</span></div> <div class='hit'><span class=''>7</span>            this.setBitsLookupTable = [];</div> <div class='hit'><span class=''>8</span>            for (var index = 1; index &lt; maxItemsSelectFrom; index++) {</div> <div class='hit'><span class=''>9</span>                this.setBitsLookupTable[index] = [];</div> <div class='hit'><span class=''>10</span>                for (var bit = 0; bit &lt; setBits.length; bit++)</div> <div class='hit'><span class=''>11</span>                    if (setBits[bit] === index)</div> <div class='hit'><span class=''>12</span>                        this.setBitsLookupTable[index].push(bit);</div> <div class=''><span class=''>13</span>            }</div> <div class=''><span class=''>14</span>        }</div> <div class='hit'><span class=''>15</span>        Combinations.prototype.select = function (from, pick) {</div> <div class='hit'><span class=''>16</span>            var combinations = [];</div> <div class=''><span class=''>17</span></div> <div class=''><span class=''>18</span>            // Get bit flags used to select the combinations from the lookup table, up to the number of items to select from</div> <div class='hit'><span class=''>19</span>            var setBits = 1 &lt;&lt; from.length;</div> <div class='hit'><span class=''>20</span>            var lookupTable = this.setBitsLookupTable[pick];</div> <div class=''><span class=''>21</span></div> <div class='hit'><span class=''>22</span>            for (var index = 0; index &lt; lookupTable.length; index++)</div> <div class='hit'><span class=''>23</span>                if (lookupTable[index] &lt; setBits)</div> <div class='hit'><span class=''>24</span>                    combinations.push(this.selectElements(from, lookupTable[index]));</div> <div class=''><span class=''>25</span></div> <div class='hit'><span class=''>26</span>            return combinations;</div> <div class=''><span class=''>27</span>        };</div> <div class=''><span class=''>28</span></div> <div class=''><span class=''>29</span>        // Return elements where the index is in the select bit flag</div> <div class='hit'><span class=''>30</span>        Combinations.prototype.selectElements = function (from, select) {</div> <div class=''><span class=''>31</span>            //SelectElementsDelegate&lt;T&gt; selectElements = (elements, select) =&gt; { return elements.Where((x, i) =&gt; (1 &lt;&lt; i &amp; select) &gt; 0); };</div> <div class='hit'><span class=''>32</span>            var elements = [];</div> <div class='hit'><span class=''>33</span>            for (var index = 0; index &lt; from.length; index++)</div> <div class='hit'><span class=''>34</span>                if (1 &lt;&lt; index &amp; select)</div> <div class='hit'><span class=''>35</span>                    elements.push(from[index]);</div> <div class=''><span class=''>36</span></div> <div class='hit'><span class=''>37</span>            return elements;</div> <div class=''><span class=''>38</span>        };</div> <div class=''><span class=''>39</span></div> <div class=''><span class=''>40</span>        // Populate array with the number of bits set i.e. [0] =&gt; 0, [1] =&gt; 1, [2] =&gt; 1, [3] =&gt; 2, ..., [333] =&gt; 5 (i.e. 101001101 has 5 bits set)</div> <div class='hit'><span class=''>41</span>        Combinations.prototype.createSetBitsLookup = function (n) {</div> <div class='hit'><span class=''>42</span>            var nextValues;</div> <div class='hit'><span class=''>43</span>            nextValues = function (x) {</div> <div class='hit'><span class=''>44</span>                return [x, x + 1, x + 1, x + 2];</div> <div class=''><span class=''>45</span>            };</div> <div class=''><span class=''>46</span></div> <div class='hit'><span class=''>47</span>            var lookupTable = nextValues(0);</div> <div class='hit'><span class=''>48</span>            for (var i = 2, tableSize = 4; i &lt; n; i++, tableSize &lt;&lt;= 1)</div> <div class='hit'><span class=''>49</span>                for (var j = 0, offset = tableSize &gt;&gt; 2; j &lt; (tableSize &gt;&gt; 1) - offset; j++)</div> <div class=''><span class=''>50</span>                    // lookupTable.InsertRange(tableSize + (j &lt;&lt; 2), nextValues(lookupTable[j + offset]));</div> <div class='hit'><span class=''>51</span>                    Array.prototype.splice.apply(lookupTable, [tableSize + (j &lt;&lt; 2), 0].concat(nextValues(lookupTable[j + offset])));</div> <div class=''><span class=''>52</span></div> <div class='hit'><span class=''>53</span>            return lookupTable;</div> <div class=''><span class=''>54</span>        };</div> <div class='hit'><span class=''>55</span>        return Combinations;</div> <div class=''><span class=''>56</span>    })();</div> <div class='hit'><span class=''>57</span>    Solver.Combinations = Combinations;</div> <div class='{{executed}}'><span class=''>58</span>})(Solver || (Solver = {}));</div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>2.</span><a href='javascript:chutzpah_toggleSource("file-2")'>c:\angularjs\sudoku\sudoku\tests\testcombinations.ts</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		100 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		41/41
+	</div>
+	<div id='file-2' class='chutzpah-source' style='display:none;'>
+		 <div class=''><span class=''>1</span>/// &lt;reference path=&quot;jasmine.d.ts&quot; /&gt;</div> <div class=''><span class=''>2</span>/// &lt;reference path=&quot;../app/Utilities/Combinations.ts&quot; /&gt;</div> <div class='hit'><span class=''>3</span>describe(&quot;Combinations&quot;, function () {</div> <div class='hit'><span class=''>4</span>    var combinations;</div> <div class='hit'><span class=''>5</span>    var from;</div> <div class=''><span class=''>6</span></div> <div class='hit'><span class=''>7</span>    beforeEach(function () {</div> <div class='hit'><span class=''>8</span>        combinations = new Solver.Combinations(9); // Columns * rows</div> <div class='hit'><span class=''>9</span>        from = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;];</div> <div class=''><span class=''>10</span>    });</div> <div class=''><span class=''>11</span></div> <div class='hit'><span class=''>12</span>    it(&quot;C(4, 1) = 4&quot;, function () {</div> <div class='hit'><span class=''>13</span>        var pick = 1;</div> <div class='hit'><span class=''>14</span>        var items = combinations.select(from, pick);</div> <div class=''><span class=''>15</span></div> <div class='hit'><span class=''>16</span>        var expected = [];</div> <div class='hit'><span class=''>17</span>        expected[0] = [&quot;a&quot;];</div> <div class='hit'><span class=''>18</span>        expected[1] = [&quot;b&quot;];</div> <div class='hit'><span class=''>19</span>        expected[2] = [&quot;c&quot;];</div> <div class='hit'><span class=''>20</span>        expected[3] = [&quot;d&quot;];</div> <div class=''><span class=''>21</span></div> <div class='hit'><span class=''>22</span>        expect(items).toEqual(expected);</div> <div class=''><span class=''>23</span>    });</div> <div class=''><span class=''>24</span></div> <div class=''><span class=''>25</span>    // C(4, 2) = 4 * 3 / 2 = 6</div> <div class='hit'><span class=''>26</span>    it(&quot;C(4, 2) = 6&quot;, function () {</div> <div class='hit'><span class=''>27</span>        var pick = 2;</div> <div class='hit'><span class=''>28</span>        var items = combinations.select(from, pick);</div> <div class=''><span class=''>29</span></div> <div class='hit'><span class=''>30</span>        var expected = [];</div> <div class='hit'><span class=''>31</span>        expected[0] = [&quot;a&quot;, &quot;b&quot;];</div> <div class='hit'><span class=''>32</span>        expected[1] = [&quot;a&quot;, &quot;c&quot;];</div> <div class='hit'><span class=''>33</span>        expected[2] = [&quot;b&quot;, &quot;c&quot;];</div> <div class='hit'><span class=''>34</span>        expected[3] = [&quot;a&quot;, &quot;d&quot;];</div> <div class='hit'><span class=''>35</span>        expected[4] = [&quot;b&quot;, &quot;d&quot;];</div> <div class='hit'><span class=''>36</span>        expected[5] = [&quot;c&quot;, &quot;d&quot;];</div> <div class=''><span class=''>37</span></div> <div class='hit'><span class=''>38</span>        expect(items).toEqual(expected);</div> <div class=''><span class=''>39</span>    });</div> <div class=''><span class=''>40</span></div> <div class='hit'><span class=''>41</span>    it(&quot;C(4, 3) = 4&quot;, function () {</div> <div class='hit'><span class=''>42</span>        var pick = 3;</div> <div class='hit'><span class=''>43</span>        var items = combinations.select(from, pick);</div> <div class=''><span class=''>44</span></div> <div class='hit'><span class=''>45</span>        var expected = [];</div> <div class='hit'><span class=''>46</span>        expected[0] = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];</div> <div class='hit'><span class=''>47</span>        expected[1] = [&quot;a&quot;, &quot;b&quot;, &quot;d&quot;];</div> <div class='hit'><span class=''>48</span>        expected[2] = [&quot;a&quot;, &quot;c&quot;, &quot;d&quot;];</div> <div class='hit'><span class=''>49</span>        expected[3] = [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;];</div> <div class=''><span class=''>50</span></div> <div class='hit'><span class=''>51</span>        expect(items).toEqual(expected);</div> <div class=''><span class=''>52</span>    });</div> <div class=''><span class=''>53</span></div> <div class='hit'><span class=''>54</span>    it(&quot;C(4, 4) = 1&quot;, function () {</div> <div class='hit'><span class=''>55</span>        var pick = 4;</div> <div class='hit'><span class=''>56</span>        var items = combinations.select(from, pick);</div> <div class=''><span class=''>57</span></div> <div class='hit'><span class=''>58</span>        var expected = [];</div> <div class='hit'><span class=''>59</span>        expected[0] = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;];</div> <div class=''><span class=''>60</span></div> <div class='hit'><span class=''>61</span>        expect(items).toEqual(expected);</div> <div class='{{executed}}'><span class=''>62</span>    });</div> <div class='{{executed}}'><span class=''>63</span>});</div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>3.</span><a href='javascript:chutzpah_toggleSource("file-3")'>Total</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		100 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		77/77
+	</div>
+	<div id='file-3' class='chutzpah-source' style='display:none;'>
+		
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+</div>
+</body>
+</html>
+

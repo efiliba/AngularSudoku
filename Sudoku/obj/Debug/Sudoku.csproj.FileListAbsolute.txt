@@ -1,0 +1,21 @@
+C:\AngularJS\Sudoku ngAnimate slider\Sudoku\Sudoku\obj\Debug\Sudoku.csprojResolveAssemblyReference.cache
+C:\AngularJS\Sudoku ngAnimate slider\Sudoku\Sudoku\obj\Debug\Sudoku.dll
+C:\AngularJS\Sudoku ngAnimate slider\Sudoku\Sudoku\obj\Debug\Sudoku.pdb
+C:\AngularJS\Sudoku\Sudoku\bin\Sudoku.dll.config
+C:\AngularJS\Sudoku\Sudoku\bin\Sudoku.dll
+C:\AngularJS\Sudoku\Sudoku\bin\Sudoku.pdb
+C:\AngularJS\Sudoku\Sudoku\obj\Debug\Sudoku.dll
+C:\AngularJS\Sudoku\Sudoku\obj\Debug\Sudoku.pdb
+C:\AngularJS\Sudoku\Sudoku\obj\Debug\Sudoku.csprojResolveAssemblyReference.cache
+C:\Users\Lelie\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.csprojResolveAssemblyReference.cache
+C:\Users\Lelie\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.dll
+C:\Users\Lelie\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.pdb
+C:\Users\Lelie\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Sudoku.dll.config
+C:\Users\Lelie\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Sudoku.dll
+C:\Users\Lelie\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Sudoku.pdb
+C:\Users\Eli\Desktop\More Sudoku\Sudoku\Sudoku\bin\Sudoku.dll.config
+C:\Users\Eli\Desktop\More Sudoku\Sudoku\Sudoku\bin\Sudoku.dll
+C:\Users\Eli\Desktop\More Sudoku\Sudoku\Sudoku\bin\Sudoku.pdb
+C:\Users\Eli\Desktop\More Sudoku\Sudoku\Sudoku\obj\Debug\Sudoku.csprojResolveAssemblyReference.cache
+C:\Users\Eli\Desktop\More Sudoku\Sudoku\Sudoku\obj\Debug\Sudoku.dll
+C:\Users\Eli\Desktop\More Sudoku\Sudoku\Sudoku\obj\Debug\Sudoku.pdb
